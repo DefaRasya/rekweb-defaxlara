@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/route1', function () {
+    echo "<h1> Ini adalah halaman test 1 </h1>";
+});
+
+Route::get('/route2', function () {
+    echo "<h1> Ini adalah halaman test 2 </h1>";
 });
