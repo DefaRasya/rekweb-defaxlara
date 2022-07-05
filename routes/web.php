@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MahasiswaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/route1', function () {
+Route::get('/', function () {
+    return view('mahasiswa/index');
+});
+
+Route::resource('mahasiswa', MahasiswaController::class);
+
+/* Route::get('/route1', function () {
     echo "<h1> Ini adalah halaman test 1 </h1>";
 });
 
 Route::get('/route2', function () {
     echo "<h1> Ini adalah halaman test 2 </h1>";
 });
+ */
